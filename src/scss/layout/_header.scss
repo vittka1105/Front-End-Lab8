@@ -1,0 +1,51 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.header{
+ @include flex(space-between);
+  padding: 20px 20px 30px;
+
+  @media (min-width: $bp-md) {
+    padding: 40px 30px 30px;
+  }
+  @media (min-width: $bp-lg) {
+    padding: 40px 70px 30px;
+  }
+}
+
+.header__container{
+  @include flex(flex-start, center);
+  gap: 10px;
+}
+
+.header__menu{
+  font-family: Gilroy-Bold, sans-serif;
+  font-size: 25px;
+  color: $background-secondary;
+}
+
+.header__logo-title{
+  display: none;
+
+  @media (min-width: $bp-md) {
+    display: block;
+    position: relative;
+    color: $black-color;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+
+    & span{
+      font-family: Gilroy-Medium, sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    &::after{
+      content: "®";
+      font-size: 25px;
+      font-weight: 300;
+      position: absolute;
+    }
+  }
+}

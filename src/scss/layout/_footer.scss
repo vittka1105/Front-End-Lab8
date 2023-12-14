@@ -1,0 +1,36 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+
+.footer {
+  @include flexes (column, center, center, 20px);
+  padding: 20px 30px;
+  width: 100%;
+  background-color: $background-primary;
+
+  & span {
+    color: $title-color;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 18px;
+  }
+
+  @media (min-width: $bp-md) {
+    padding: 45px 30px;
+    @include flexes (row, space-between, center, 20px);
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: 25px 70px;
+  }
+}
+
+.footer__text {
+  text-align: center;
+  color: $title-color;
+  font-family: 'Gilroy-Medium', sans-serif;
+  font-size: 18px;
+}
+
+.footer__list{
+  @include flexes (row, center, center, 10px);
+}

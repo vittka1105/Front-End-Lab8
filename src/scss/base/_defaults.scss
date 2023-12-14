@@ -1,0 +1,21 @@
+@import "../abstracts/variables";
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button{
+  border: none;
+  font: inherit;
+  background-color: transparent;
+}
+
+body{
+  background-color: $background-primary;
+}

@@ -1,0 +1,114 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.selected-work{
+  padding: 30px 20px;
+  border-top: 1px solid $background-secondary;
+
+  @media (min-width: $bp-md) {
+    padding: 70px;
+  }
+}
+
+.selected-work__img-container{
+  margin-top: 30px;
+  @include flex(flex-start,center,column);
+  gap: 20px;
+
+  @media (min-width: $bp-lg) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px 40px;
+  }
+}
+
+.selected-work__title{
+  color: $background-secondary;
+  text-align: center;
+  font-family: Gilroy-Regular, sans-serif;
+  font-size: 54px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+
+  @media (min-width: 440px) {
+    font-size: 80px;
+  }
+
+  @media (min-width: $bp-md) {
+    font-size: 135px;
+  }
+
+  @media (min-width: $bp-lg) {
+    font-size: 212px;
+  }
+}
+
+.selected-work__content{
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  width: 100%;
+
+  @media (min-width: $bp-md) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $bp-lg) {
+    height: 100%;
+    margin-bottom: 0;
+    align-content: space-between;
+  }
+}
+
+.selected-work__content-link-container{
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.selected-work__content-btn-container{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 30px;
+}
+
+.selected-work__content-title{
+  color: $black-color;
+  font-family: Gilroy-Bold, sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+
+  @media (min-width: $bp-md) {
+    font-size: 40px;
+  }
+}
+
+.selected-work__img{
+  width: 100%;
+}
+
+.selected-work__content-link{
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 50px;
+  background-color: $white-color;
+
+  & span{
+    color: $background-secondary;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: 18px;
+  }
+}
+
+.selected-work__content--mobile{
+  @media (min-width: $bp-lg) {
+    display: none;
+  }
+}
+
+.selected-work__content--desktop{
+  display: none;
+  @media (min-width: $bp-lg) {
+    display: grid;
+  }
+}

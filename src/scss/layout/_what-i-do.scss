@@ -1,0 +1,163 @@
+@import"../abstracts/variables";
+@import "../abstracts/mixins";
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+.what-i-do {
+  padding-top: 30px;
+  background-image: url(../../img/what-i-do-mob.png);
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-bottom: 1% solid $background-secondary;
+
+  @media (min-width: $bp-md) {
+    background-image: url(../../img/what-i-do-tab.png);
+    background-size: 100% 50%;
+  }
+
+  @media (min-width: $bp-lg) {
+    background-image: url(../../img/what-i-do-des.png);
+    background-position: left center;
+    background-size: 55% 100%;
+    @include flexes(column, unset, flex-end);
+
+  }
+}
+
+.title {
+  color: $background-secondary;
+  font-family: Gilroy-Regular, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+
+
+  @media (min-width: $bp-md) {
+    padding-top: 10px;
+    font-size: 100px;
+  }
+
+  @media (min-width: $bp-lg) {
+    margin-bottom: 50px;
+    background-size: 55% 100%;
+    font-size: 80px;
+    line-height: 1.2;
+  }
+}
+
+.what-i-do__head-title {
+  color: $black-color;
+  font-family: 'Gilroy-Medium', sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-top: 25px;
+
+  @media (min-width: $bp-md) {
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $bp-lg) {
+    font-size: 30px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+.what-i-do__head-title--first{
+  &::before {
+    content: "01";
+    font-family: 'Gilroy-Light', sans-serif;
+    padding-right: 8px;
+  }
+}
+
+.what-i-do__head-title--second{
+  &::before {
+    padding-right: 8px;
+    content: "02";
+    font-family: 'Gilroy-Light', sans-serif;
+  }
+}
+
+.what-i-do__head-title--third{
+  &::before {
+    content: "03";
+    font-family: 'Gilroy-Light', sans-serif;
+    padding-right: 8px;
+  }
+}
+
+.what-i-do__head-title--fourth{
+  &::before {
+    padding-right: 8px;
+    content: "04";
+    font-family: 'Gilroy-Light', sans-serif;
+  }
+}
+
+.what-i-do__text{
+  color: $black-color;
+  font-family: 'Inter', sans-serif;;
+  border-bottom: 1px solid $background-secondary;
+  position: relative;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  @media (min-width: $bp-md) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $bp-lg) {
+    max-width: 759px;
+    font-size: 16px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    line-height: 21px;
+  }
+
+  &:last-child {
+    padding-bottom: unset;
+    margin-bottom: unset;
+    border-bottom: none;
+  }
+}
+.what-i-do__wrapper {
+
+  padding-top: 450px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+
+  @media (min-width: $bp-md) {
+    padding-top: 750px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+  }
+
+  @media (min-width: $bp-lg) {
+    @include flexes(column, center, flex-start);
+    padding: 0 55px 40px 0;
+    margin-right: 55px;
+    max-width: 500px;
+    width: 100%;
+
+    > * {
+      flex: 1;
+      min-height: 0;
+    }
+  }
+}

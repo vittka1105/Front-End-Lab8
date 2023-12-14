@@ -1,0 +1,25 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.logotypes{
+  @include flex(center);
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 20px;
+  border-bottom: 1px solid $background-secondary;
+  @media (min-width: $bp-md) {
+    padding: 40px 30px;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: 70px;
+    gap: 40px;
+  }
+}
+
+.logotypes__logo-item{
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: $white-color;
+  border-radius: 50px;
+}

@@ -1,0 +1,15 @@
+@mixin flex($jc: flex-start, $ai: flex-start, $fd: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}
+@mixin flexes ($fd: row, $jc: center, $ai: center, $gap: 0px) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}
+
+

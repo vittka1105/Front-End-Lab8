@@ -1,0 +1,71 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.contact {
+  padding: 30px 20px 50px;
+  @include flexes (column, center, center, 30px);
+  border-bottom: 1px solid $background-secondary;
+  overflow: hidden;
+  @media (min-width: $bp-md) {
+    padding: 30px 30px 50px;
+    gap: 40px;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding: 100px 70px;
+    @include flexes (row, center, flex-start, 40px);
+
+  }
+}
+
+.contact__wrapper {
+  @include flexes (column, center, center, 30px);
+
+  @media (min-width: $bp-lg) {
+    @include flexes (column, center, flex-start, 30px);
+  }
+
+  & p {
+    color: $title-color;
+    text-align: center;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: 30px;
+
+    @media (min-width: $bp-md) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $bp-lg) {
+      text-align: start;
+    }
+  }
+}
+.contact__second-title {
+  color: $background-secondary;
+  text-align: center;
+  font-family: Gilroy-Bold, sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+
+  @media (min-width: $bp-md) {
+    font-size: 64px;
+  }
+
+  @media (min-width: $bp-lg) {
+    text-align: start;
+  }
+}
+.contact__title {
+  color: $black-color;
+  text-align: center;
+  font-family: Gilroy,sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  @media (min-width: $bp-md) {
+    font-size: 150px;
+  }
+}
+
+
